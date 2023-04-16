@@ -1,6 +1,6 @@
-import logo from "../logo.svg";
 import opening from "../assets/vowOpening.png";
 import "../App.css";
+import { Typography } from "@mui/material";
 
 const Vow = () => {
   return (
@@ -12,15 +12,7 @@ const Vow = () => {
         width={"100%"}
         style={{ objectFit: "cover" }}
       />
-      <p>Reid Report</p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
+      <Typography>Vow of the Disciple</Typography>
     </div>
   );
 };
