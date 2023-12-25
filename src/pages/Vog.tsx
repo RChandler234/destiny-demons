@@ -1,5 +1,6 @@
-import { Typography } from "@mui/material";
 import vog from "../assets/vaultOfGlass.jpg";
+import { RaidView } from "../components/RaidView";
+import { RaidType } from "../utils/raidIds";
 
 const Vog = () => {
   return (
@@ -11,7 +12,7 @@ const Vog = () => {
         width={"100%"}
         style={{ objectFit: "cover" }}
       />
-      <Typography>Vault of Glass</Typography>
+      <RaidView raid={RaidType.VOG} />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import { AppBar, Box, Container, Toolbar } from "@mui/material";
 import raidImage from "../assets/raidImage.png";
 import ghost from "../assets/ghostMenu.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const styles = {
   link: {
@@ -16,9 +16,32 @@ const styles = {
   },
 };
 
+const navBackgroundColor = (url: string) => {
+  switch (url) {
+    case "/VOW":
+      return "#510400";
+    case "/RON":
+      return "#F89880";
+    case "/GARDEN":
+      return "#013220";
+    case "/LASTWISH":
+      return "#301934";
+    case "/VAULTOFGLASS":
+      return "#5f6c81";
+    case "/TANIKS":
+      return "#601EF9";
+    case "/TOTEMS":
+      return "#095d55";
+    default:
+      return "#00008B";
+  }
+};
+
 const NavBar = () => {
+  const url = useLocation().pathname;
+
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ backgroundColor: navBackgroundColor(url) }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters style={{ justifyContent: "space-between" }}>
           <Box
@@ -87,10 +110,10 @@ const NavBar = () => {
             <Link to="/GARDEN" style={styles.link}>
               GARDEN
             </Link>
-            <Link to="/LASTPISS" style={styles.link}>
+            <Link to="/LASTWISH" style={styles.link}>
               LAST WISH
             </Link>
-            <Link to="/VAULTOFASS" style={styles.link}>
+            <Link to="/VAULTOFGLASS" style={styles.link}>
               VAULT
             </Link>
             <Link to="/TANIKS" style={styles.link}>

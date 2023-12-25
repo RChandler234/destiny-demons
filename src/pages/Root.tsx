@@ -1,9 +1,10 @@
-import { Typography } from "@mui/material";
 import rootOpening from "../assets/rootOpening.jpg";
+import { RaidView } from "../components/RaidView";
+import { RaidType } from "../utils/raidIds";
 
 const Root = () => {
   return (
-    <div style={{ textAlign: "center" }}>
+    <div style={{ textAlign: "center", height: "100%" }}>
       <img
         src={rootOpening}
         alt="Root Header"
@@ -11,7 +12,7 @@ const Root = () => {
         width={"100%"}
         style={{ objectFit: "cover" }}
       />
-      <Typography>Root of Nightmares</Typography>{" "}
+      <RaidView raid={RaidType.RON} />
     </div>
   );
 };

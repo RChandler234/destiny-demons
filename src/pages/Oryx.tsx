@@ -1,5 +1,6 @@
-import { Typography } from "@mui/material";
 import kingsFall from "../assets/kingsFall.jpg";
+import { RaidView } from "../components/RaidView";
+import { RaidType } from "../utils/raidIds";
 
 const Oryx = () => {
   return (
@@ -11,7 +12,7 @@ const Oryx = () => {
         width={"100%"}
         style={{ objectFit: "cover" }}
       />
-      <Typography>King's Fall</Typography>
+      <RaidView raid={RaidType.KING} />
     </div>
   );
 };

@@ -1,5 +1,6 @@
-import { Typography } from "@mui/material";
 import gardenOpening from "../assets/gardenOpening.jpg";
+import { RaidView } from "../components/RaidView";
+import { RaidType } from "../utils/raidIds";
 
 const Garden = () => {
   return (
@@ -11,7 +12,7 @@ const Garden = () => {
         width={"100%"}
         style={{ objectFit: "cover" }}
       />
-      <Typography>Garden of Salvation</Typography>{" "}
+      <RaidView raid={RaidType.GARDEN} />
     </div>
   );
 };

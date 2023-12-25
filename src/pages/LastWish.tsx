@@ -1,5 +1,6 @@
-import { Typography } from "@mui/material";
 import lastWish from "../assets/lastwish.jpg";
+import { RaidView } from "../components/RaidView";
+import { RaidType } from "../utils/raidIds";
 
 const LastWish = () => {
   return (
@@ -11,7 +12,7 @@ const LastWish = () => {
         width={"100%"}
         style={{ objectFit: "cover" }}
       />
-      <Typography>Last Wish</Typography>;
+      <RaidView raid={RaidType.WISH} />
     </div>
   );
 };

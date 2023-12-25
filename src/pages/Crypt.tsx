@@ -1,5 +1,6 @@
-import { Typography } from "@mui/material";
 import deepstone from "../assets/deepstone.jpg";
+import { RaidView } from "../components/RaidView";
+import { RaidType } from "../utils/raidIds";
 
 const Crypt = () => {
   return (
@@ -11,7 +12,7 @@ const Crypt = () => {
         width={"100%"}
         style={{ objectFit: "cover" }}
       />
-      <Typography>Deep Stone Crypt</Typography>
+      <RaidView raid={RaidType.DEEP} />
     </div>
   );
 };

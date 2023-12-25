@@ -1,10 +1,11 @@
 import opening from "../assets/vowOpening.png";
 import "../App.css";
-import { Typography } from "@mui/material";
+import { RaidType } from "../utils/raidIds";
+import { RaidView } from "../components/RaidView";
 
 const Vow = () => {
   return (
-    <div className="App">
+    <div style={{ textAlign: "center", height: "100%" }}>
       <img
         src={opening}
         alt="header"
@@ -12,7 +13,7 @@ const Vow = () => {
         width={"100%"}
         style={{ objectFit: "cover" }}
       />
-      <Typography>Vow of the Disciple</Typography>
+      <RaidView raid={RaidType.VOW} />
     </div>
   );
 };
