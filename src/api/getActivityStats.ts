@@ -17,6 +17,6 @@ export const getRaidActivityInfo = (
 };
 
 export const getCarnageReport = (activityId: number) => {
-  const url = `https://www.bungie.net/Platform/Destiny2/Stats/PostGameCarnageReport/${activityId}`;
+  const url = `https://stats.bungie.net/Platform/Destiny2/Stats/PostGameCarnageReport/${activityId}`;
   return axios.get(url, config);
 };
