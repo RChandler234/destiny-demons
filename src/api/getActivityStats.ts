@@ -3,7 +3,7 @@ import { Player } from "../utils/players";
 
 const config = {
   headers: {
-    "X-API-Key": process.env.REACT_APP_BUNGIE_API,
+    "x-api-key": process.env.REACT_APP_BUNGIE_API,
   },
 };
 
